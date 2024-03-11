@@ -11,3 +11,7 @@ run:
 
 src:
 	dbt source freshness
+
+test_source:
+	dbt test -s "source:*"
+# 	dbt test -s source:jaffle_shop
