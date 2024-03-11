@@ -15,3 +15,5 @@ src:
 test_source:
 	dbt test -s "source:*"
 # 	dbt test -s source:jaffle_shop
+#	dbt test --select test_type:generic
+#	dbt test --select test_type:singular
