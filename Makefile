@@ -5,3 +5,6 @@ install:
 
 lint:
 	pre-commit run --all
+
+run:
+	dbt run
