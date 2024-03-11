@@ -3,6 +3,9 @@ version: 2
 
 models:
   - name: stg_orders
+    description: >
+      Some multiline description
+      about the srg_orders model
     config:
       materialized: view
     columns:
