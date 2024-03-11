@@ -1,0 +1,21 @@
+default:
+  target: dev
+
+  outputs:
+    .base_bq_profile: &base_bq_profile
+      job_execution_timeout_seconds: 300
+      priority: interactive
+      dataset: dbt_mloera
+      type: bigquery
+      job_retries: 1
+      location: EU
+      threads: 4
+      method: service-account
+      keyfile: "/Users/marioloeralozano/.gcp_keys/mll-dbt-fund-0132/dbt-user.json"
+      project: mll-dbt-fund-0132
+
+    dev:
+      <<: *base_bq_profile
+
+    prod:
+      <<: *base_bq_profile
