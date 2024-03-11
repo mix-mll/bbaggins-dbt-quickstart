@@ -20,6 +20,7 @@ models:
         description: '{{ doc("orders_status") }}'
         tests:
           - accepted_values:
+              # values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
               values:
                 - completed
                 - shipped
