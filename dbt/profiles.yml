@@ -8,7 +8,7 @@ default:
       dataset: dbt_mloera
       type: bigquery
       job_retries: 1
-      location: EU
+      location: US
       threads: 4
       method: service-account
       keyfile: "/Users/marioloeralozano/.gcp_keys/mll-dbt-fund-0132/dbt-user.json"
