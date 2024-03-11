@@ -8,3 +8,6 @@ lint:
 
 run:
 	dbt run
+
+src:
+	dbt source freshness
