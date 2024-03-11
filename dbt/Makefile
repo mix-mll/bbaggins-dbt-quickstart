@@ -1,0 +1,2 @@
+run:
+	dbt run
