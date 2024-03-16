@@ -6,6 +6,7 @@ sources:
     # schema: stripe name is defaul value
     tables:
       - name: payment_fake_name
+        # identifier: if you want to use a source name that differs from the name in the database.
         identifier: payment
         loaded_at_field: _batched_at
         freshness:
