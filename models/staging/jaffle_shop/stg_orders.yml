@@ -1,0 +1,32 @@
+# specifi yml file for a model
+version: 2
+
+models:
+  - name: stg_orders
+    description: >
+      Some multiline description
+      about the srg_orders model
+    config:
+      materialized: view
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: status
+        description: '{{ doc("orders_status") }}'
+        tests:
+          - accepted_values:
+              # values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
+              values:
+                - completed
+                - shipped
+                - returned
+                - placed
+                - return_pending
